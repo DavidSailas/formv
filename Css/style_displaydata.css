@@ -1,0 +1,99 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: white; 
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change to flex-start to allow scrolling */
+    align-items: center;
+    overflow-y:scroll; /* Allow vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1;
+}
+.data-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin-top: 50px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.data-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.5rem;
+}
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s;
+}
+.data-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.data-item strong {
+    width: 250px; 
+    text-align: left; 
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-add {
+    background-color: #3b82f6; /* Blue */
+}
+
+.btn-add:hover {
+    background-color: #2563eb;
+}
+
+.btn-edit {
+    background-color: #10b981; /* Green */
+}
+
+.btn-edit:hover {
+    background-color: #059669;
+}

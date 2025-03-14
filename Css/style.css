@@ -1,0 +1,166 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: white; 
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change to flex-start to allow scrolling */
+    align-items: center;
+    overflow-y:scroll; /* Allow vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white; 
+}
+
+h2 {
+    font-size: 18px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.input-box {
+    flex: 1 1 calc(33.33% - 1rem);
+    text-align: left;
+}
+
+.input-box p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: white; 
+}
+
+.input-box input,
+.input-box select,
+.input-box input[date] {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background: rgb(255, 255, 255, 0.1); 
+    color: white;
+}
+
+.input-box input:hover,
+.input-box select:hover,
+.input-box select:focus {
+    border-color: #007BFF;
+    color: white;
+}
+
+/* Change the highlight color of options when hovering */
+.input-box select option {
+    background: white; /* Default background */
+    color: black; /* Default text color */
+}
+
+.input-box select option:hover {
+    background: #007BFF !important; /* Blue background on hover */
+    color: white !important; /* White text on hover */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3); 
+    margin: 1rem 0;
+}
+
+.input-radio {
+    padding-left: 35px;
+    text-align: left;
+    flex: 1 1 calc(33.33% - 1rem); 
+}
+
+.input-radio p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: white; 
+}
+
+.input-radio label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: white; 
+}
+
+.input-radio input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+#next-button {
+    background: #0d8400;
+    color: white; 
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+    width: 20%; 
+    display: block; 
+    margin-left: auto;
+}
+
+#next-button:hover {
+    background: #1eae01; 
+    transform: scale(1.05); 
+}
+
+#next-button:active {
+    transform: scale(0.95); 
+}
