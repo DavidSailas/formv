@@ -2,19 +2,22 @@
 session_start();
 
 // Check if form data was submitted via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $_SESSION['form_data'] = $_POST;
-    header("Location: /formv/View/validationdisplay.php");
-    exit;
-}
-
-// If no form data is found, redirect back to the form page
 if (!isset($_SESSION['form_data'])) {
     header("Location: /formv/View/index.php");
     exit;
 }
 
 $form_data = $_SESSION['form_data'];
+
+// Calculate age based on date of birth
+include $_SERVER['DOCUMENT_ROOT'].'/formv/Model/getbod.php';
+$age = calculateAge($form_data['dob']); 
+
+// Unset session data after use
+unset($_SESSION['form_data']);
+
+// Include the functions file
+include $_SERVER['DOCUMENT_ROOT'].'/formv/Model/functions.php'; // Adjust the path as necessary
 ?>
 
 

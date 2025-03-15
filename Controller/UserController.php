@@ -38,9 +38,11 @@ class UserController {
             }
 
             if ($this->model->saveUser ($data, $user_id)) {
+                // Store the form data in session for display
+                $_SESSION['form_data'] = $data; // Store data to display later
                 header('Location: /formv/View/display_data.php');
                 exit();
-            } else {
+            }  else {
                 echo "Error saving user data.";
             }
         } else {

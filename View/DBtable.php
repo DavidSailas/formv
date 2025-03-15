@@ -5,6 +5,10 @@ ini_set('display_errors', 1);
 include $_SERVER['DOCUMENT_ROOT'].'/formv/Model/db_connect.php';
 include $_SERVER['DOCUMENT_ROOT'].'/formv/Model/getbod.php';
 include $_SERVER['DOCUMENT_ROOT'].'/formv/Model/delete.php';
+
+// Fetch records from the database
+$query = "SELECT user_id, last_name, first_name, middle_name, dob, sex FROM user_table";
+$result = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
